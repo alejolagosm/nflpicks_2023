@@ -1,0 +1,25 @@
+---
+interface CardProps {
+  teamA: string;
+  teamB: string;
+  teamLogoSrcA: string;
+  teamLogoSrcB: string;
+  gamblingLine: string;
+}
+
+const { teamA, teamB, teamLogoSrcA, teamLogoSrcB, gamblingLine } = Astro.props as CardProps;
+---
+
+<div class="bg-white rounded-md shadow-md p-4 m-4 text-center">
+  <div class="flex justify-between mb-4">
+    <div class="text-center">
+      <img src={teamLogoSrcA} alt="Team A Logo" class="mx-auto" />
+      <h1 class="font-bold text-xl">{teamA}</h1>
+    </div>
+    <div class="text-center">
+      <img src={teamLogoSrcB} alt="Team B Logo" class="mx-auto" />
+      <h1 class="font-bold text-xl">{teamB}</h1>
+    </div>
+  </div>
+  <p class="text-gray-600 mt-2">{gamblingLine}</p>
+</div>
