@@ -1,0 +1,36 @@
+---
+
+import Layout from '../../layouts/Layout.astro'
+import Picks from '../../components/Picks.astro';
+
+const weekPicks = [
+    {
+        teamA: "bengals",
+        teamB: "ravens",
+        gamblingLine: "Ravens -3.5"
+    },
+    {
+        teamA: "steelers",
+        teamB: "browns",
+        gamblingLine: "Steelers +3.5"
+    },
+    {
+        teamA: "bears",
+        teamB: "lions",
+        gamblingLine: "Lions -10"
+    },
+    {
+        teamA: "chargers",
+        teamB: "packers",
+        gamblingLine: "Chargers -3.0"
+    },
+]
+---
+
+
+
+
+<Layout title='Week 9 picks'>
+    <h1>These are my week 9 picks</h1>
+    <Picks picks={weekPicks}></Picks>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Card from "./Card.astro";
+import CardProps from "./Card.astro";
+
+interface CardProps {
+  picks: CardProps[]
+}
+
+const { picks } = Astro.props as CardProps;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+    {picks.length > 0 ? picks.map((card, index) => <Card key={index} {...card} />) : <p>No cards available.</p>}
+</div>
