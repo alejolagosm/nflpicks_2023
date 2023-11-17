@@ -1,9 +1,16 @@
 ---
+import {Image} from 'astro:assets';
+import ProfilePic from '../assets/alejo.jpeg';
+
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1 class="text-center">A little about me</h1>
+	<Image src={ProfilePic} alt="My profile photo" quality="max" class="rounded-full"/>
+	<p>
+		Hi! I am Alejo, a developer from Colombia. Welcome to my test blog from Astro.
+		This is where I post weekly picks for NFL games
+	</p>
 </Layout>
 
 <style>
